@@ -52,6 +52,10 @@ var mspaint = {
 			canvas.addEventListener('mousemove', onPaint, false);
 		}, false);
 
+		canvas.addEventListener('mouseout', function() {
+			canvas.removeEventListener('mousemove', onPaint, false);
+		}, false);
+
 		canvas.addEventListener('mouseup', function() {
 			canvas.removeEventListener('mousemove', onPaint, false);
 		}, false);
