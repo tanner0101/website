@@ -80,7 +80,7 @@ section.main {
   border-bottom: 1px solid #8b8275; }
   section.main div.controls {
     position: absolute;
-    background-image: url(panel.png);
+    background-image: url(../images/panel.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     top: 2px;
@@ -111,7 +111,7 @@ footer.main {
   footer.main div.colors {
     position: absolute;
     top: 4px;
-    background-image: url(colors.png);
+    background-image: url(../images/colors.png);
     background-repeat: no-repeat;
     background-size: auto 100%;
     left: 0;
