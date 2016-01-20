@@ -3,6 +3,10 @@ body, html {
   padding: 0;
   height: 100%; }
 
+div.about {
+  display: none;
+}
+
 body {
   background: #808080;
   font-family: Arial, sans-serif; }
