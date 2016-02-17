@@ -1,7 +1,7 @@
 import Vapor
 
 Route.get("/") { request in 
-	return View(path: "index.html")
+	return try View(path: "index.html")
 }
 
 Route.get("heartbeat") { request in 
@@ -10,4 +10,4 @@ Route.get("heartbeat") { request in
 
 //start the server up
 let server = Server()
-server.run(port: 80)
+server.run(port: 8080)

@@ -3,11 +3,13 @@ var mspaint = {
 	paintSelector: '',
 	paintContext: null,
 	currentIcon: null,
+	canvas: null,
 	start: function(selector1, selector2) {
 		this.sketchSelector = selector1;
 		this.paintSelector = selector2;
 
 		var canvas = document.querySelector(this.paintSelector);
+		this.canvas = canvas;
 		this.paintContext = canvas.getContext('2d');
 		 
 		var sketch = document.querySelector(this.sketchSelector);
@@ -87,6 +89,12 @@ var mspaint = {
 		this.currentIcon.style.background = '#' + color;
 		this.paintContext.strokeStyle = '#' + color;
 	},
+}
+
+window.download = function() {
+	var dt = mspaint.canvas.toDataURL();
+	dt = dt.replace(/^data:image\/[^;]/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=art.png');
+	window.location.href = dt;
 }
 
 window.onload = function() {
