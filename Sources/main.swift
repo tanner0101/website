@@ -10,4 +10,4 @@ Route.get("heartbeat") { request in
 
 //start the server up
 let server = Server()
-server.run(port: 8080)
+server.run(port: 80)
