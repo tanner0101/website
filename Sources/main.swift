@@ -1,13 +1,13 @@
 import Vapor
 
-let app = Application()
+let drop = Droplet()
 
-app.get("/") { request in 
-	return try View(path: "index.html")
+drop.get("/") { request in
+	return try drop.view.make("index.html")
 }
 
-app.get("heartbeat") { request in 
-	return ["lub": "dub"]
+drop.get("heartbeat") { request in
+    return try JSON(node: ["lub": "dub"])
 }
 
-app.start(port: 80)
+drop.serve()
