@@ -10,4 +10,4 @@ drop.get("heartbeat") { request in
     return try JSON(node: ["lub": "dub"])
 }
 
-drop.serve()
+drop.run()
