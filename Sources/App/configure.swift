@@ -14,6 +14,6 @@ func configure(_ s: inout Services) {
     // Register middleware
     s.extend(MiddlewareConfiguration.self) { config, c in
         // Serves files from `Public/` directory
-        try config.use(c.make(FileMiddleware.self))
+        try config.use(c.make( FileMiddleware.self))
     }
 }

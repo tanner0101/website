@@ -1,12 +1,7 @@
 import Vapor
 
 func routes(_ r: Routes, _ c: Container) throws {
-    let view = try c.make(ViewRenderer.self)
-    r.get { req in
-        return view.render("index.html")
-    }
-
-    r.get("heartbeat") { req in
-        return ["lub": "dub"]
-    }
+    let main = try MainController(view: c.make())
+    r.get(use: main.index)
+    r.get("heartbeat", use: main.heartbeat)
 }
