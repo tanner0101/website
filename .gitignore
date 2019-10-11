@@ -1,3 +1,5 @@
 Packages
 .build
 *.xcodeproj
+.swiftpm
+
