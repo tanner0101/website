@@ -5,4 +5,8 @@ func routes(_ r: Routes, _ c: Container) throws {
     r.get { req in
         return view.render("index.html")
     }
+
+    r.get("heartbeat") { req in
+        return ["lub": "dub"]
+    }
 }
