@@ -19,9 +19,7 @@ header.main {
   height: 50px;
   background: #d9d5cf;
   position: relative;
-  border-bottom: 1px solid #8b8275;
-  font-smooth: never;
-  -webkit-font-smoothing: none; }
+  border-bottom: 1px solid #8b8275; }
   header.main h1.title {
     z-index: 900;
     font-size: 14px;
